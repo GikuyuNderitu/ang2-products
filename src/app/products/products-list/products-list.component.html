@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Product List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Date Created</th>
+        <th>Date Updated</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let index=index">
+        <td>{{product.name}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.createdAt | date:'d/M/y'}}</td>
+        <td>{{product.updatedAt | date:'d/M/y'}}</td>
+        <td><button (click)="removeProduct(index)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

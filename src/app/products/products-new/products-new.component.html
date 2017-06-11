@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>New Product Creation</h1>
+  <div class="inputs-container">
+    <label for="">Name:<input type="text" name="name" (input)= "name = $event.target.value" [value]="name"></label>
+    <label for="">Description:<input type="text" name="description" (input)= "description = $event.target.value" [value]="description"></label>
+    <label for="">Price:<input type="number" name="price" (input)= "price = $event.target.value" [value]="price"></label>
+    <label for="">Quantity:<input type="number" name="quantity" (input)= "quantity = $event.target.value" [value]="quantity"></label>
+    <button (click)="newProduct()">Submit</button>
+  </div>
+</div>
